@@ -1,5 +1,8 @@
+import {Ingredient} from "../shared/ingredient";
+
 export class Recipe {
-  constructor(private name: string,
-              private description: string,
-              private imagePath: string ){}
+  constructor(public name: string,
+              public description: string,
+              public imagePath: string,
+              public ingredients: Ingredient[]){}
 }

@@ -8,9 +8,12 @@ import {RecipeItemComponent} from "./recipe-item.component";
   templateUrl: './recipe-list.component.html',
 })
 export class RecipeListComponent implements OnInit {
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Schnitzel','Very tasty', 'https://i2.wp.com/www.themakeupdummy.com/wp-content/uploads/2016/11/Healthy-Nutella-Granola-by-The-Makeup-Dummy.jpg?resize=600%2C400', []),
+    new Recipe('Summer Salad','Okayish', 'https://i2.wp.com/www.themakeupdummy.com/wp-content/uploads/2016/11/Healthy-Nutella-Granola-by-The-Makeup-Dummy.jpg?resize=600%2C400', [])
+  ];
+
   @Output() recipeSelected = new EventEmitter<Recipe>();
-  recipe = new Recipe('Dummy','Dummy', 'https://images-na.ssl-images-amazon.com/images/I/5171RQ0k2fL._SL1500_.jpg');
 
   constructor() { }
 
